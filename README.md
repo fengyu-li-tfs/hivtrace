@@ -136,8 +136,14 @@ Masks known DRAMs (Drug Resistance-Associated Mutation) positions from provided 
  
 ## -c --compare
 
-Compare uploaded sequences to all public sequences. 
+Compare uploaded sequences to all public sequences.
 Retrieved periodically from the [Los Alamos HIV Sequence Database](http://hiv.lanl.gov)
+
+## --skip-alignment
+
+Skip the alignment step and use the input sequences as-is. This option assumes that the input sequences are already aligned.
+
+**Note:** This option is incompatible with `--compare` (comparison to LANL database), as pre-aligned sequences cannot be compared to the public database.
 
 ## -o --output
 Specify output filename. If no output filename is provided, then the output filename will be <input_filename>.results.json
