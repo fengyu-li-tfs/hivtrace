@@ -46,7 +46,7 @@ def setup_package():
         install_requires=[
             'biopython >= 1.58',
             'tornado >= 4.3',
-            'hivclustering[edgefiltering] >= 1.9.6',
+            'hivclustering[edgefiltering] >= 1.9.7',
             ],
         entry_points={
             'console_scripts': [
