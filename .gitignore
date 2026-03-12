@@ -12,6 +12,8 @@ env/
 build/
 develop-eggs/
 dist/
+!hivtrace/web/static/dist/
+!hivtrace/web/static/assets/
 downloads/
 eggs/
 .eggs/
