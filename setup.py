@@ -25,7 +25,7 @@ def setup_package():
 
     setup(
         name='hivtrace',
-        version='0.10.1',
+        version='0.10.2',
         description='HIV-TRACE',
         author='Joel Wertheim, Sergei Pond, and Steven Weaver',
         author_email='sweaver@temple.edu',
@@ -36,11 +36,10 @@ def setup_package():
                 'rsrc/LANL.FASTA.gz',
                 'rsrc/LANL.TN93OUTPUT.csv.gz',
                 'web/templates/results.html',
-                'web/static/*.js',
-                'web/static/*.css',
-                'web/static/workers/*.js',
-                'web/static/css/*.css',
-                'web/static/fonts/*'
+                'web/static/dist/*',
+                'web/static/dist/**/*',
+                'web/static/assets/*',
+                'web/static/assets/**/*',
                 ]
             },
         python_requires='>=3.10',
