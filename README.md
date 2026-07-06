@@ -130,3 +130,25 @@ hivtrace_viz results.json
 ```
 
 Or visit [hivtrace-viz](https://veg.github.io/hivtrace-viz/) and click **Load File**.
+
+### Cloudflare Pages (Web Viewer)
+
+A static web viewer is also deployed on Cloudflare Pages:
+
+1. Open the deployed URL in your browser
+2. Drop a `.json` results file onto the page, click **Load File**, or use **Load from URL**
+3. Alternatively, append `?url=results.json` to load a file hosted at the same domain
+
+#### Deploying Your Own Instance
+
+To deploy the web viewer to Cloudflare Pages:
+
+1. Fork or clone this repository
+2. In the Cloudflare Dashboard, go to **Workers & Pages** → **Create** → **Pages**
+3. Connect your Git repository
+4. Configure the build settings:
+   - **Build command**: `npm install && npm run build`
+   - **Build output directory**: `hivtrace/web/static`
+5. Deploy
+
+The static site is fully client-side — all computation happens in the browser after loading a results JSON file.

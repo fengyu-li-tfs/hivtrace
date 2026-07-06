@@ -1,0 +1,21 @@
+# Cloudflare Pages Headers
+# Set appropriate caching and security headers
+
+/*
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# Cache static assets aggressively (hashed filenames)
+/dist/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/workers/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# HTML and data files - shorter cache
+/*.html
+  Cache-Control: public, max-age=3600
+
+/*.json
+  Cache-Control: public, max-age=3600
